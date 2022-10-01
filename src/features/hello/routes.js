@@ -5,7 +5,7 @@
  */
 const routes = async (fastify, _options) => {
   fastify.get(
-    "/hello",
+    "/",
     {
       schema: {
         querystring: {
