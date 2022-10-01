@@ -31,10 +31,31 @@
         "type": "github"
       }
     },
+    "npm-buildpackage": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1664286682,
+        "narHash": "sha256-OBdpqW2zpwYF/JWUk013rbMdIC3R17ynX78tQPbfHNw=",
+        "owner": "serokell",
+        "repo": "nix-npm-buildpackage",
+        "rev": "bc0c4989f664ff262d3ab39cad9dc0f6f1c10017",
+        "type": "github"
+      },
+      "original": {
+        "owner": "serokell",
+        "repo": "nix-npm-buildpackage",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "npm-buildpackage": "npm-buildpackage"
       }
     }
   },

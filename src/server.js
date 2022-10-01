@@ -4,6 +4,9 @@ import { buildApp } from "./app.js";
 process.on("SIGINT", () => process.exit(0));
 process.on("SIGTERM", () => process.exit(0));
 
+const PORT = process.env.APP_PORT || 8080;
+const HOST = process.env.APP_HOST || "127.0.0.1";
+
 const start = async () => {
   const app = buildApp({
     logger: {
@@ -12,7 +15,7 @@ const start = async () => {
     genReqId: uuidv4,
   });
   try {
-    app.listen({ port: 8080 });
+    app.listen({ port: PORT, host: HOST });
   } catch (err) {
     app.log.error(err);
     process.exit(1);
